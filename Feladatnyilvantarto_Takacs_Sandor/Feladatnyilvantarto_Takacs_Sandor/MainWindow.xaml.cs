@@ -20,9 +20,25 @@ namespace Feladatnyilvantarto_Takacs_Sandor
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<CheckBox> feladatokListaja = new List<CheckBox>();
+        List<CheckBox> toroltFeladatok = new List<CheckBox>();
         public MainWindow()
         {
             InitializeComponent();
+            szuksegesFeladatokListaja.ItemsSource = feladatokListaja;
+            toroltFeladatokListaja.ItemsSource = toroltFeladatok;
+        }
+
+        private void UjELemHozzaadasa_Click(object sender, RoutedEventArgs e)
+        {
+            if (feladatSzovegbevitele.Text != "")
+            {
+                CheckBox ujCheckbox = new CheckBox();
+                ujCheckbox.Content = feladatSzovegbevitele.Text;
+                feladatokListaja.Add(ujCheckbox);
+                szuksegesFeladatokListaja.Items.Refresh();
+            }
+        }
+
         }
     }
-}

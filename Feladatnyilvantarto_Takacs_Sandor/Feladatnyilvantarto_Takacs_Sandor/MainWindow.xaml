@@ -9,16 +9,16 @@
     <Grid>
         <Label Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Takács Sándor 2021" HorizontalAlignment="Left" Margin="468,383,0,0" VerticalAlignment="Top" Width="114"/>
-        <ListBox HorizontalAlignment="Left" Height="192" Margin="10,41,0,0" VerticalAlignment="Top" Width="400"/>
+        <ListBox Name="szuksegesFeladatokListaja" HorizontalAlignment="Left" Height="192" Margin="10,41,0,0" VerticalAlignment="Top" Width="400"/>
         <Label Content="Feladat szövege:" HorizontalAlignment="Left" Margin="415,10,0,0" VerticalAlignment="Top" Width="103"/>
-        <Button Content="Új hozzáadása" HorizontalAlignment="Left" Margin="415,69,0,0" VerticalAlignment="Top" Width="167"/>
+        <Button Name="UjELemHozzaadasa" Content="Új hozzáadása" HorizontalAlignment="Left" Margin="415,69,0,0" VerticalAlignment="Top" Width="167" Click="UjELemHozzaadasa_Click"/>
         <Button Content="Kijelölt feladat módosítása" HorizontalAlignment="Left" Margin="415,94,0,0" VerticalAlignment="Top" Width="167"/>
         <Button Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="415,119,0,0" VerticalAlignment="Top" Width="167"/>
-        <ListBox HorizontalAlignment="Left" Height="145" Margin="10,264,0,0" VerticalAlignment="Top" Width="400"/>
+        <ListBox Name="toroltFeladatokListaja" HorizontalAlignment="Left" Height="145" Margin="10,264,0,0" VerticalAlignment="Top" Width="400"/>
         <Label Content="Törölt elemek" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top"/>
         <Button Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="415,264,0,0" VerticalAlignment="Top" Width="167"/>
         <Button Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="415,289,0,0" VerticalAlignment="Top" Width="167"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="415,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBox Name="feladatSzovegbevitele" HorizontalAlignment="Left" Height="23" Margin="415,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
 
     </Grid>
 </Window>
