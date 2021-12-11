@@ -56,5 +56,22 @@ namespace Feladatnyilvantarto_Takacs_Sandor
             jelenlegi.FontStyle = FontStyles.Normal;
             jelenlegi.Foreground = Brushes.Black;
         }
+
+        private void kijeloltFeladatTorlese_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox kijelolt = (CheckBox)szuksegesFeladatokListaja.SelectedItem;
+            toroltFeladatok.Add(kijelolt);
+            feladatokListaja.Remove(kijelolt);
+            toroltFeladatokListaja.Items.Refresh();
+        }
+
+        private void kijeloltFeladatVisszaallit_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox kijelolt = (CheckBox)toroltFeladatokListaja.SelectedItem;
+            feladatokListaja.Add(kijelolt);
+            toroltFeladatok.Remove(kijelolt);
+            szuksegesFeladatokListaja.Items.Refresh();
+        }
     }
-    }
+}
+
