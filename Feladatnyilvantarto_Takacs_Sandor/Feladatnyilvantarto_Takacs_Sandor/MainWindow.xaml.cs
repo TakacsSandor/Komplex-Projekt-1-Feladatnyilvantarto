@@ -36,9 +36,25 @@ namespace Feladatnyilvantarto_Takacs_Sandor
                 CheckBox ujCheckbox = new CheckBox();
                 ujCheckbox.Content = feladatSzovegbevitele.Text;
                 feladatokListaja.Add(ujCheckbox);
+                ujCheckbox.Checked += new RoutedEventHandler(CheckBox_Checked);
+                ujCheckbox.Unchecked += new RoutedEventHandler(CheckBox_UnChecked);
                 szuksegesFeladatokListaja.Items.Refresh();
+
             }
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox jelenlegi = (CheckBox)sender;
+            jelenlegi.FontStyle = FontStyles.Italic;
+            jelenlegi.Foreground = Brushes.Gray;
         }
+
+        private void CheckBox_UnChecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox jelenlegi = (CheckBox)sender;
+            jelenlegi.FontStyle = FontStyles.Normal;
+            jelenlegi.Foreground = Brushes.Black;
+        }
+    }
     }
