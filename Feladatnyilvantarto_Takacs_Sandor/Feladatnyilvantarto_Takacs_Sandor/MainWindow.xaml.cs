@@ -27,6 +27,8 @@ namespace Feladatnyilvantarto_Takacs_Sandor
             InitializeComponent();
             szuksegesFeladatokListaja.ItemsSource = feladatokListaja;
             toroltFeladatokListaja.ItemsSource = toroltFeladatok;
+            
+
         }
 
         private void UjELemHozzaadasa_Click(object sender, RoutedEventArgs e)
@@ -72,6 +74,23 @@ namespace Feladatnyilvantarto_Takacs_Sandor
             toroltFeladatok.Remove(kijelolt);
             szuksegesFeladatokListaja.Items.Refresh();
         }
+
+        private void kijeloltFeladatVeglegTorlese_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox kijelolt = (CheckBox)toroltFeladatokListaja.SelectedItem;
+            toroltFeladatok.Remove(kijelolt);
+            toroltFeladatokListaja.Items.Refresh();
+        }
+         
+        private void kijeloltFeladatModositasa_Click(object sender, RoutedEventArgs e)
+        {
+            if (feladatSzovegbevitele.Text != "")
+            {
+                CheckBox kijelolt = (CheckBox)szuksegesFeladatokListaja.SelectedItem;
+                kijelolt.Content = feladatSzovegbevitele.Text;
+            }
+    }
+        
     }
 }
 
