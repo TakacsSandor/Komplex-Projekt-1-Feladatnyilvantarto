@@ -89,8 +89,14 @@ namespace Feladatnyilvantarto_Takacs_Sandor
                 CheckBox kijelolt = (CheckBox)szuksegesFeladatokListaja.SelectedItem;
                 kijelolt.Content = feladatSzovegbevitele.Text;
             }
+            
     }
-        
+
+        private void szuksegesFeladatokListaja_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CheckBox kijelolt = (CheckBox)szuksegesFeladatokListaja.SelectedItem;
+            feladatSzovegbevitele.Text = (string)kijelolt.Content;
+        }
     }
 }
 
