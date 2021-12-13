@@ -111,7 +111,7 @@ namespace Feladatnyilvantarto_Takacs_Sandor
                 string cbJellemzoje = x.Content.ToString() + ";" + allapot;
                 checkboxok.Add(cbJellemzoje);
             }
-            File.WriteAllLines("feladatokTaroloja.txt", checkboxok);
+            File.WriteAllLines("feladatokTaroloja", checkboxok);
             
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -124,7 +124,7 @@ namespace Feladatnyilvantarto_Takacs_Sandor
                 string cbJellemzoje = x.Content.ToString() + ";" + allapot;
                 checkboxok.Add(cbJellemzoje);
             }
-            File.WriteAllLines("toroltFeladatokTaroloja.txt", checkboxok);
+            File.WriteAllLines("toroltFeladatokTaroloja", checkboxok);
         }
         /*
         private void Window_Activated(object sender, EventArgs e)
