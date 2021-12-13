@@ -5,20 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Feladatnyilvantarto_Takacs_Sandor"
         mc:Ignorable="d"
-        Title="Feladatok nyilvántartása" Height="450" Width="600">
+        Title="Feladatok nyilvántartása" Height="450" Width="600" Closed="Window_Closed" Closing="Window_Closing">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Takács Sándor 2021" HorizontalAlignment="Left" Margin="468,383,0,0" VerticalAlignment="Top" Width="114"/>
-        <ListBox Name="szuksegesFeladatokListaja" HorizontalAlignment="Left" Height="192" Margin="10,41,0,0" VerticalAlignment="Top" Width="400" SelectionChanged="szuksegesFeladatokListaja_SelectionChanged"/>
-        <Label Content="Feladat szövege:" HorizontalAlignment="Left" Margin="415,10,0,0" VerticalAlignment="Top" Width="103"/>
-        <Button Name="UjELemHozzaadasa" Content="Új hozzáadása" HorizontalAlignment="Left" Margin="415,69,0,0" VerticalAlignment="Top" Width="167" Click="UjELemHozzaadasa_Click"/>
-        <Button Name="kijeloltFeladatModositasa" Content="Kijelölt feladat módosítása" HorizontalAlignment="Left" Margin="415,94,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatModositasa_Click" />
-        <Button Name="kijeloltFeladatTorlese" Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="415,119,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatTorlese_Click"/>
-        <ListBox Name="toroltFeladatokListaja" HorizontalAlignment="Left" Height="145" Margin="10,264,0,0" VerticalAlignment="Top" Width="400"/>
+        <Label Content="Takács Sándor 2021" HorizontalAlignment="Left" Margin="116,383,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
+        <ListBox Name="szuksegesFeladatokListaja" HorizontalAlignment="Left" Height="192" Margin="10,41,0,0" VerticalAlignment="Top" Width="400" SelectionChanged="szuksegesFeladatokListaja_SelectionChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Feladat szövege:" HorizontalAlignment="Left" Margin="63,10,0,0" VerticalAlignment="Top" Width="103" Grid.Column="1"/>
+        <Button Name="UjELemHozzaadasa" Content="Új hozzáadása" HorizontalAlignment="Left" Margin="63,69,0,0" VerticalAlignment="Top" Width="167" Click="UjELemHozzaadasa_Click" Grid.Column="1"/>
+        <Button Name="kijeloltFeladatModositasa" Content="Kijelölt feladat módosítása" HorizontalAlignment="Left" Margin="63,94,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatModositasa_Click" Grid.Column="1" />
+        <Button Name="kijeloltFeladatTorlese" Content="Kijelölt feladat törlése" HorizontalAlignment="Left" Margin="63,119,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatTorlese_Click" Grid.Column="1"/>
+        <ListBox Name="toroltFeladatokListaja" HorizontalAlignment="Left" Height="145" Margin="10,264,0,0" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="2" />
         <Label Content="Törölt elemek" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top"/>
-        <Button Name="kijeloltFeladatVisszaallit" Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="415,264,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatVisszaallit_Click"/>
-        <Button Name="kijeloltFeladatVeglegTorlese" Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="415,289,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatVeglegTorlese_Click"/>
-        <TextBox Name="feladatSzovegbevitele" HorizontalAlignment="Left" Height="23" Margin="415,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <Button Name="kijeloltFeladatVisszaallit" Content="Kijelölt feladat visszaállít" HorizontalAlignment="Left" Margin="63,264,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatVisszaallit_Click" Grid.Column="1"/>
+        <Button Name="kijeloltFeladatVeglegTorlese" Content="Kijelölt feladat végleg törlése" HorizontalAlignment="Left" Margin="63,289,0,0" VerticalAlignment="Top" Width="167" Click="kijeloltFeladatVeglegTorlese_Click" Grid.Column="1"/>
+        <TextBox Name="feladatSzovegbevitele" HorizontalAlignment="Left" Height="23" Margin="63,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" Grid.Column="1"/>
 
     </Grid>
 </Window>
